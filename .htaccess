@@ -1,0 +1,28 @@
+# Bubble Sisters — ajustes do servidor (HostGator / Apache)
+Options -Indexes
+ErrorDocument 404 /404.html
+
+# Força https depois que o certificado SSL estiver ativo (tire o # das 3 linhas abaixo)
+#RewriteEngine On
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType text/javascript "access plus 1 week"
+</IfModule>
+<IfModule mod_headers.c>
+  # preços e contatos mudam: o navegador sempre confere se o config.js é o mais novo
+  <Files "config.js">
+    Header set Cache-Control "no-cache"
+  </Files>
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json
+</IfModule>
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+</IfModule>

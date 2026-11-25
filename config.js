@@ -1,0 +1,82 @@
+// ═══════════════════════════════════════════════════════════════════
+//  BUBBLE SISTERS — CONFIGURAÇÃO DA LOJA
+//  Este é o único arquivo que você precisa editar para mudar preços,
+//  WhatsApp, Instagram, frete e os produtos em destaque.
+//
+//  Cuidados ao editar:
+//   • Mude só o que está depois dos dois-pontos.
+//   • Textos ficam entre aspas duplas: "assim".
+//   • Preços usam ponto, não vírgula: 39.90
+//   • Toda linha termina com vírgula, MENOS a última de cada bloco.
+//
+//  A chave secreta do Mercado Pago NÃO fica aqui (este arquivo é público).
+//  Ela fica em  pagamento/segredo.php
+// ═══════════════════════════════════════════════════════════════════
+window.BS_CONFIG = {
+
+  "whatsapp": "551150511772",
+  "whatsapp_exibir": "(11) 5051-1772",
+  "instagram": "https://www.instagram.com/bubblesisters.co",
+  "instagram_exibir": "@bubblesisters.co",
+  "email_pedidos": "",
+
+  "frete_gratis_acima_de": 150,
+  "cep_origem": "04521-002",
+
+  "frete": [
+    { "regiao": "Cidade de São Paulo",         "valor": 12.90, "prazo": "1 a 2 dias úteis",  "ceps": [[1000, 5999], [8000, 8499]] },
+    { "regiao": "Grande SP e interior de SP",  "valor": 18.90, "prazo": "2 a 4 dias úteis",  "ceps": [[6000, 7999], [8500, 19999]] },
+    { "regiao": "RJ, MG e ES",                 "valor": 24.90, "prazo": "3 a 6 dias úteis",  "ceps": [[20000, 39999]] },
+    { "regiao": "Sul",                         "valor": 27.90, "prazo": "4 a 7 dias úteis",  "ceps": [[80000, 99999]] },
+    { "regiao": "Centro-Oeste",                "valor": 32.90, "prazo": "5 a 8 dias úteis",  "ceps": [[70000, 76799], [78000, 79999]] },
+    { "regiao": "Nordeste",                    "valor": 38.90, "prazo": "6 a 10 dias úteis", "ceps": [[40000, 65999]] },
+    { "regiao": "Norte",                       "valor": 45.90, "prazo": "8 a 14 dias úteis", "ceps": [[66000, 69999], [76800, 77999]] }
+  ],
+
+  "mercado_pago_ativo": true,
+
+  "vitrine": ["bleu-absolu", "capim-limao", "petale-royale-rosee", "velvet-fig-e-cassis", "explosao-citrica"],
+
+  "destaques": ["iris-de-provence", "pitanga", "slave-to-love", "coco", "explosao-herbal", "manteiga-noturna", "spray-lavanda-e-laranja-doce", "musk-e-amber"],
+
+  "precos": {
+    "padrao": 39.90,
+
+    "afeto": 39.90,
+    "allure-extreme": 39.90,
+    "bleu-absolu": 39.90,
+    "calandre-vintage": 39.90,
+    "capim-limao": 39.90,
+    "cho-ku-rei": 39.90,
+    "coco": 39.90,
+    "everything-soap": 39.90,
+    "explosao-citrica": 39.90,
+    "facial-hidratante": 39.90,
+    "iris-de-provence": 39.90,
+    "lhomme-sauvage": 39.90,
+    "mentol-therapy": 39.90,
+    "musk-e-amber": 39.90,
+    "petale-royale": 39.90,
+    "petale-royale-rosee": 39.90,
+    "pitanga": 39.90,
+    "sabonete-de-anil": 39.90,
+    "sabonete-facial": 39.90,
+    "sao-miguel-arcanjo": 39.90,
+    "slave-to-love": 39.90,
+    "sleep-time": 39.90,
+    "vanilla": 39.90,
+    "velvet-fig-e-cassis": 39.90,
+    "wake-up": 39.90,
+
+    "explosao-herbal": 39.90,
+    "protecao-ancestral": 39.90,
+
+    "manteiga-circulatoria": 39.90,
+    "manteiga-noturna": 39.90,
+    "roll-on-arnica": 39.90,
+
+    "spray-bergamota-e-alecrim": 39.90,
+    "spray-lavanda-e-laranja-doce": 39.90
+  }
+
+};

@@ -1,0 +1,45 @@
+BUBBLE SISTERS — COMO COLOCAR O SITE NO AR (HostGator)
+======================================================
+
+1) SUBIR OS ARQUIVOS
+   a. Entre no cPanel da HostGator e abra "Gerenciador de Arquivos".
+   b. Abra a pasta  public_html  (é a pasta do seu domínio).
+   c. Clique em "Carregar" e envie o arquivo  bubble-sisters-hostgator.zip
+   d. Volte ao Gerenciador, clique no zip com o botão direito e escolha "Extract".
+   e. Confira: dentro de public_html devem aparecer index.html, config.js,
+      as pastas assets, produto, sabonetes, pagamento, pedidos etc.
+      (Se tudo ficou dentro de uma subpasta, mova o conteúdo para public_html.)
+   f. No Gerenciador, clique em "Configurações" (canto superior direito) e marque
+      "Mostrar arquivos ocultos". O arquivo  .htaccess  precisa estar em public_html.
+   g. Apague o zip do servidor.
+
+2) ATIVAR O CADEADO (https)
+   No cPanel, abra "SSL/TLS Status" e ative o certificado gratuito do domínio.
+   Depois abra o arquivo .htaccess e tire o # das 3 linhas indicadas nele.
+   O Mercado Pago só devolve o cliente ao site automaticamente com https.
+
+3) ATIVAR O MERCADO PAGO
+   a. Entre em mercadopago.com.br/developers com a conta que vai receber.
+   b. "Suas integrações" → "Criar aplicação" → escolha Checkout Pro.
+   c. Em "Credenciais de produção", copie o Access Token.
+   d. No Gerenciador de Arquivos, edite  pagamento/segredo.php  e cole o token
+      no lugar de COLE_AQUI_O_ACCESS_TOKEN (mantenha as aspas).
+   e. Faça uma compra de teste de valor baixo e confira no app do Mercado Pago.
+   Enquanto o token não for colocado, o botão "Pagar agora" avisa que o pagamento
+   ainda não foi ativado e o cliente pode finalizar pelo WhatsApp.
+
+4) RECEBER OS PEDIDOS  (IMPORTANTE)
+   Edite  config.js  e preencha  "email_pedidos"  com o seu e-mail.
+   A cada pedido iniciado você recebe um e-mail com itens, total e endereço.
+   Cada pedido também fica salvo na pasta  pedidos  (só você vê, pelo cPanel).
+   Sempre confirme no app do Mercado Pago que o pagamento foi aprovado antes
+   de enviar: o e-mail é mandado quando o cliente VAI para o pagamento.
+
+5) MUDAR PREÇOS, WHATSAPP, FRETE E DESTAQUES
+   Tudo fica no arquivo  config.js  (as instruções estão no topo dele).
+   Edite pelo Gerenciador de Arquivos (botão direito → Edit) e salve.
+   O número do WhatsApp vai com 55 + DDD + número, só dígitos.
+
+6) O QUE NÃO PRECISA MEXER
+   app.js, dados.js, estilo.css e as pastas de páginas. Para trocar textos,
+   fotos ou incluir produtos, peça uma nova versão do site.
