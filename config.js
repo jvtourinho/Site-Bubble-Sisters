@@ -37,12 +37,17 @@ window.BS_CONFIG = {
 
   "vitrine": ["bleu-absolu", "capim-limao", "petale-royale-rosee", "velvet-fig-e-cassis", "explosao-citrica"],
 
-  "destaques": ["iris-de-provence", "pitanga", "slave-to-love", "coco", "explosao-herbal", "manteiga-noturna", "spray-lavanda-e-laranja-doce", "musk-e-amber"],
+  "destaques": ["orvalho", "iris-de-provence", "slave-to-love", "coco", "explosao-herbal", "manteiga-noturna", "spray-lavanda-e-laranja-doce", "madeiras-sagradas"],
 
   "precos": {
     "padrao": 39.90,
 
     "afeto": 39.90,
+    "bamboo": 39.90,
+    "terra-molhada": 39.90,
+    "madeiras-sagradas": 39.90,
+    "clareira-de-luz": 39.90,
+    "orvalho": 39.90,
     "allure-extreme": 39.90,
     "bleu-absolu": 39.90,
     "calandre-vintage": 39.90,
